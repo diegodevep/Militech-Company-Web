@@ -16,16 +16,15 @@
 <div class="super_container">
 	
 	<!-- Header -->
-
 	<header class="header">
 		<div class="header_inner d-flex flex-row align-items-center justify-content-start">
-			<div class="logo"><a href="#">Militech</a></div>
+			<div class="logo"><a href="index.html">Militech Company</a></div>
 			<nav class="main_nav">
 				<ul>
 					<li><a href="index.html">Menú</a></li>
 					<li><a href="categories.html">Ropa</a></li>
+					<li><a href="categories.html">Accesorios</a></li>
 					<li><a href="categories.html">Armas</a></li>
-					<li><a href="categories.html">Cursos</a></li>
 					<li><a href="contact.html">Campamento</a></li>
 				</ul>
 			</nav>
@@ -37,18 +36,16 @@
 					</form>
 				</div>
 				<div class="shopping">
-					<!-- Cart -->
-					<a href="#">
+					<a href="cart.html">
 						<div class="cart">
 							<img src="images/shopping-bag.svg" alt="">
 							<div class="cart_num_container">
 								<div class="cart_num_inner">
-									<div class="cart_num">1</div>
+									<div class="cart_num">0</div>
 								</div>
 							</div>
 						</div>
 					</a>
-					<!-- Star -->
 					<a href="#">
 						<div class="star">
 							<img src="images/star.svg" alt="">
@@ -59,7 +56,6 @@
 							</div>
 						</div>
 					</a>
-					<!-- Avatar -->
 					<a href="#">
 						<div class="avatar">
 							<img src="images/avatar.svg" alt="">
@@ -68,34 +64,38 @@
 				</div>
 			</div>
 
-			<div class="burger_container d-flex flex-column align-items-center justify-content-around menu_mm"><div></div><div></div><div></div></div>
+			<div class="burger_container d-flex flex-column align-items-center justify-content-around menu_mm">
+				<div></div><div></div><div></div>
+			</div>
 		</div>
 	</header>
 
 	<!-- Menu -->
-
 	<div class="menu d-flex flex-column align-items-end justify-content-start text-right menu_mm trans_400">
-		<div class="menu_close_container"><div class="menu_close"><div></div><div></div></div></div>
-		<div class="logo menu_mm"><a href="#">Wish</a></div>
+		<div class="menu_close_container">
+			<div class="menu_close"><div></div><div></div></div>
+		</div>
+		<div class="logo menu_mm"><a href="index.html">Militech Company</a></div>
 		<div class="search">
 			<form action="#">
 				<input type="search" class="search_input menu_mm" required="required">
-				<button type="submit" id="search_button_menu" class="search_button menu_mm"><img class="menu_mm" src="images/magnifying-glass.svg" alt=""></button>
+				<button type="submit" id="search_button_menu" class="search_button menu_mm">
+					<img class="menu_mm" src="images/magnifying-glass.svg" alt="">
+				</button>
 			</form>
 		</div>
 		<nav class="menu_nav">
 			<ul class="menu_mm">
 				<li class="menu_mm"><a href="index.html">home</a></li>
-				<li class="menu_mm"><a href="#">Ropa</a></li>
-				<li class="menu_mm"><a href="#">Acessorios</a></li>
-				<li class="menu_mm"><a href="#">Armas</a></li>
-				<li class="menu_mm"><a href="#">Municiones</a></li>
+				<li class="menu_mm"><a href="categories.html">Ropa</a></li>
+				<li class="menu_mm"><a href="categories.html">Accesorios</a></li>
+				<li class="menu_mm"><a href="categories.html">Armas</a></li>
+				<li class="menu_mm"><a href="categories.html">Municiones</a></li>
 			</ul>
 		</nav>
-	</div>	
+	</div>
 
 	<!-- Home -->
-
 	<div class="home">
 		<div class="home_background parallax-window" data-parallax="scroll" data-image-src="images/product.jpg" data-speed="0.8"></div>
 		<div class="container">
@@ -103,12 +103,12 @@
 				<div class="col">
 					<div class="home_container">
 						<div class="home_content">
-							<div class="home_title">Woman</div>
+							<div class="home_title" id="product_home_title">Producto</div>
 							<div class="breadcrumbs">
 								<ul>
 									<li><a href="index.html">Home</a></li>
-									<li>Woman</li>
-									<li>Swimsuits</li>
+									<li id="product_breadcrumb_category">Categoría</li>
+									<li id="product_breadcrumb_name">Producto</li>
 								</ul>
 							</div>
 						</div>
@@ -119,30 +119,28 @@
 	</div>
 
 	<!-- Product -->
-
 	<div class="product">
 		<div class="container">
 			<div class="row">
 				<div class="col">
 					<div class="current_page">
 						<ul>
-							<li><a href="categories.html">Woman's Fashion</a></li>
-							<li><a href="categories.html">Swimsuits</a></li>
-							<li>2 Piece Swimsuits</li>
+							<li><a href="categories.html" id="current_page_category_link">Categoría</a></li>
+							<li id="current_page_name">Producto</li>
 						</ul>
 					</div>
 				</div>
 			</div>
-			<div class="row product_row">
 
+			<div class="row product_row">
 				<!-- Product Image -->
 				<div class="col-lg-7">
 					<div class="product_image">
-						<div class="product_image_large"><img src="images/product_image_1.jpg" alt=""></div>
-						<div class="product_image_thumbnails d-flex flex-row align-items-start justify-content-start">
-							<div class="product_image_thumbnail" style="background-image:url(images/product_image_1.jpg)" data-image="images/product_image_1.jpg"></div>
-							<div class="product_image_thumbnail" style="background-image:url(images/product_image_2.jpg)" data-image="images/product_image_2.jpg"></div>
-							<div class="product_image_thumbnail" style="background-image:url(images/product_image_4.jpg)" data-image="images/product_image_4.jpg"></div>
+						<div class="product_image_large">
+							<img id="product_main_image" src="images/product_1.jpg" alt="Product">
+						</div>
+						<div id="product_thumbnails" class="product_image_thumbnails d-flex flex-row align-items-start justify-content-start">
+							<!-- render dinámico -->
 						</div>
 					</div>
 				</div>
@@ -150,23 +148,26 @@
 				<!-- Product Content -->
 				<div class="col-lg-5">
 					<div class="product_content">
-						<div class="product_name">2 Piece Swimsuit</div>
-						<div class="product_price">$35.00</div>
-						<div class="rating rating_4" data-rating="4">
+						<div class="product_name" id="product_name">Product Name</div>
+						<div class="product_price" id="product_price">S/ 0.00</div>
+
+						<div class="rating rating_5" id="product_rating">
 							<i class="fa fa-star"></i>
 							<i class="fa fa-star"></i>
 							<i class="fa fa-star"></i>
 							<i class="fa fa-star"></i>
 							<i class="fa fa-star"></i>
 						</div>
-						<!-- In Stock -->
+
 						<div class="in_stock_container">
-							<div class="in_stock in_stock_true"></div>
-							<span>in stock</span>
+							<div class="in_stock in_stock_true" id="product_stock_indicator"></div>
+							<span id="product_stock_text">in stock</span>
 						</div>
+
 						<div class="product_text">
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis quam ipsum. Pellentesque consequat tellus non tortor tempus, id egestas elit iaculis. Proin eu dui porta, pretium metus vitae, pharetra odio. Sed ac mi commodo, pellentesque erat eget, accumsan justo. Etiam sed placerat felis. Proin non rutrum ligula.</p>
+							<p id="product_description">Product description.</p>
 						</div>
+
 						<!-- Product Quantity -->
 						<div class="product_quantity_container">
 							<span>Quantity</span>
@@ -178,49 +179,31 @@
 								</div>
 							</div>
 						</div>
+
 						<!-- Product Size -->
 						<div class="product_size_container">
-							<span>Size</span>
+							<span>Talla</span>
 							<div class="product_size">
-								<ul class="d-flex flex-row align-items-start justify-content-start">
-									<li>
-										<input type="radio" id="radio_1" name="product_radio" class="regular_radio radio_1">
-										<label for="radio_1">XS</label>
-									</li>
-									<li>
-										<input type="radio" id="radio_2" name="product_radio" class="regular_radio radio_2" checked>
-										<label for="radio_2">S</label>
-									</li>
-									<li>
-										<input type="radio" id="radio_3" name="product_radio" class="regular_radio radio_3">
-										<label for="radio_3">M</label>
-									</li>
-									<li>
-										<input type="radio" id="radio_4" name="product_radio" class="regular_radio radio_4">
-										<label for="radio_4">L</label>
-									</li>
-									<li>
-										<input type="radio" id="radio_5" name="product_radio" class="regular_radio radio_5">
-										<label for="radio_5">XL</label>
-									</li>
+								<ul id="product_sizes" class="d-flex flex-row align-items-start justify-content-start">
+									<!-- render dinámico -->
 								</ul>
 							</div>
-							<div class="button cart_button"><a href="#">add to cart</a></div>
+							<div class="button cart_button">
+								<a href="#" onclick="return addCurrentProductToCart();">add to cart</a>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 
 			<!-- Reviews -->
-
 			<div class="row">
 				<div class="col">
 					<div class="reviews">
 						<div class="reviews_title">reviews</div>
 						<div class="reviews_container">
 							<ul>
-								<!-- Review -->
-								<li class=" review clearfix">
+								<li class="review clearfix">
 									<div class="review_image"><img src="images/review_1.jpg" alt=""></div>
 									<div class="review_content">
 										<div class="review_name"><a href="#">Maria Smith</a></div>
@@ -233,12 +216,12 @@
 											<i class="fa fa-star"></i>
 										</div>
 										<div class="review_text">
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis quam ipsum. Pellentesque consequat tellus non tortor tempus, id egestas elit iaculis. Proin eu dui porta, pretium metus vitae, pharetra odio. Sed ac mi commodo, pellentesque erat eget, accumsan justo. Etiam sed placerat felis. Proin non rutrum ligula. </p>
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 										</div>
 									</div>
 								</li>
-								<!-- Review -->
-								<li class=" review clearfix">
+
+								<li class="review clearfix">
 									<div class="review_image"><img src="images/review_2.jpg" alt=""></div>
 									<div class="review_content">
 										<div class="review_name"><a href="#">Maria Smith</a></div>
@@ -251,7 +234,7 @@
 											<i class="fa fa-star"></i>
 										</div>
 										<div class="review_text">
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis quam ipsum. Pellentesque consequat tellus non tortor tempus, id egestas elit iaculis. Proin eu dui porta, pretium metus vitae, pharetra odio. Sed ac mi commodo, pellentesque erat eget, accumsan justo. Etiam sed placerat felis. Proin non rutrum ligula. </p>
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 										</div>
 									</div>
 								</li>
@@ -262,7 +245,6 @@
 			</div>
 
 			<!-- Leave a Review -->
-
 			<div class="row">
 				<div class="col">
 					<div class="review_form_container">
@@ -281,11 +263,10 @@
 					</div>
 				</div>
 			</div>
-		</div>		
+		</div>
 	</div>
 
 	<!-- Newsletter -->
-
 	<div class="newsletter">
 		<div class="newsletter_content">
 			<div class="newsletter_image" style="background-image:url(images/newsletter.jpg)"></div>
@@ -306,7 +287,7 @@
 								<button type="submit" class="newsletter_button">subscribe</button>
 							</form>
 						</div>
-						<div class="newsletter_text">Integer ut imperdiet erat. Quisque ultricies lectus tellus, eu tristique magna pharetra nec. Fusce vel lorem libero. Integer ex mi, facilisis sed nisi ut, vestib ulum ultrices nulla. Aliquam egestas tempor leo.</div>
+						<div class="newsletter_text">Integer ut imperdiet erat. Quisque ultricies lectus tellus, eu tristique magna pharetra nec.</div>
 					</div>
 				</div>
 			</div>
@@ -314,7 +295,6 @@
 	</div>
 
 	<!-- Footer -->
-
 	<footer class="footer">
 		<div class="container">
 			<div class="row">
@@ -338,9 +318,9 @@
 							<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
 						</ul>
 					</div>
-					<div class="copyright"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+					<div class="copyright">
 Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -353,5 +333,240 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 <script src="plugins/easing/easing.js"></script>
 <script src="plugins/parallax-js-master/parallax.min.js"></script>
 <script src="js/product_custom.js"></script>
+<script src="js/cart.js"></script>
+
+<script>
+let currentProduct = null;
+
+const PRODUCTS = {
+	"dress-01": {
+		id: "dress-01",
+		name: "Woman's Long Dress",
+		category: "Ropa",
+		price: 45,
+		image: "images/product_1.jpg",
+		gallery: ["images/product_1.jpg", "images/product_1.jpg", "images/product_1.jpg"],
+		description: "Vestido largo para mujer con un look elegante y cómodo para distintas ocasiones.",
+		rating: 5,
+		stock: true,
+		sizes: ["S", "M", "L"]
+	},
+	"swimsuit-01": {
+		id: "swimsuit-01",
+		name: "2 Piece Swimsuit",
+		category: "Ropa",
+		price: 35,
+		image: "images/product_2.jpg",
+		gallery: ["images/product_2.jpg", "images/product_2.jpg", "images/product_2.jpg"],
+		description: "Traje de baño de dos piezas con diseño moderno y ajuste cómodo.",
+		rating: 5,
+		stock: true,
+		sizes: ["S", "M", "L"]
+	},
+	"jacket-01": {
+		id: "jacket-01",
+		name: "Man Blue Jacket",
+		category: "Ropa",
+		price: 145,
+		image: "images/product_3.jpg",
+		gallery: ["images/product_3.jpg", "images/product_3.jpg", "images/product_3.jpg"],
+		description: "Chaqueta azul para hombre con estilo casual y acabado resistente.",
+		rating: 5,
+		stock: true,
+		sizes: ["M", "L", "XL"]
+	}
+};
+
+function formatMoney(value) {
+	return "S/ " + Number(value).toFixed(2);
+}
+
+function getProductIdFromUrl() {
+	const params = new URLSearchParams(window.location.search);
+	return params.get("id");
+}
+
+function getProductById(id) {
+	return PRODUCTS[id] || null;
+}
+
+function renderRating(rating) {
+	const ratingContainer = document.getElementById("product_rating");
+	if (!ratingContainer) return;
+
+	let starsHtml = "";
+	for (let i = 1; i <= 5; i++) {
+		starsHtml += '<i class="fa fa-star"></i>';
+	}
+
+	ratingContainer.className = "rating rating_" + rating;
+	ratingContainer.innerHTML = starsHtml;
+}
+
+function renderSizes(sizes) {
+	const sizesContainer = document.getElementById("product_sizes");
+	if (!sizesContainer) return;
+
+	if (!sizes || !sizes.length) {
+		sizesContainer.innerHTML = "<li>No sizes available</li>";
+		return;
+	}
+
+	sizesContainer.innerHTML = sizes.map((size, index) => {
+		const inputId = "size_" + index;
+		const checked = index === 0 ? "checked" : "";
+
+		return `
+			<li>
+				<input type="radio" id="${inputId}" name="product_size" class="regular_radio" value="${size}" ${checked}>
+				<label for="${inputId}">${size}</label>
+			</li>
+		`;
+	}).join("");
+}
+
+function renderGallery(gallery, fallbackImage) {
+	const thumbnailsContainer = document.getElementById("product_thumbnails");
+	const mainImage = document.getElementById("product_main_image");
+
+	if (!thumbnailsContainer || !mainImage) return;
+
+	const images = (gallery && gallery.length) ? gallery : [fallbackImage];
+
+	mainImage.src = images[0];
+
+	thumbnailsContainer.innerHTML = images.map((image, index) => {
+		const activeClass = index === 0 ? " active" : "";
+		return `
+			<div class="product_image_thumbnail${activeClass}" style="background-image:url(${image})" data-image="${image}"></div>
+		`;
+	}).join("");
+
+	const thumbnails = thumbnailsContainer.querySelectorAll(".product_image_thumbnail");
+	thumbnails.forEach(thumbnail => {
+		thumbnail.addEventListener("click", function () {
+			const selectedImage = this.getAttribute("data-image");
+			mainImage.src = selectedImage;
+
+			thumbnails.forEach(t => t.classList.remove("active"));
+			this.classList.add("active");
+		});
+	});
+}
+
+function renderProduct(product) {
+	currentProduct = product;
+
+	document.title = product.name;
+	document.getElementById("product_home_title").textContent = product.category || "Producto";
+	document.getElementById("product_breadcrumb_category").textContent = product.category || "Categoría";
+	document.getElementById("product_breadcrumb_name").textContent = product.name;
+	document.getElementById("current_page_category_link").textContent = product.category || "Categoría";
+	document.getElementById("current_page_name").textContent = product.name;
+	document.getElementById("product_name").textContent = product.name;
+	document.getElementById("product_price").textContent = formatMoney(product.price);
+	document.getElementById("product_description").textContent = product.description || "No description available.";
+
+	const stockIndicator = document.getElementById("product_stock_indicator");
+	const stockText = document.getElementById("product_stock_text");
+
+	if (product.stock) {
+		stockIndicator.className = "in_stock in_stock_true";
+		stockText.textContent = "in stock";
+	} else {
+		stockIndicator.className = "in_stock";
+		stockText.textContent = "out of stock";
+	}
+
+	renderRating(product.rating || 5);
+	renderSizes(product.sizes || []);
+	renderGallery(product.gallery || [], product.image);
+}
+
+function renderProductNotFound() {
+	document.title = "Product not found";
+	document.getElementById("product_home_title").textContent = "Producto";
+	document.getElementById("product_breadcrumb_category").textContent = "Catálogo";
+	document.getElementById("product_breadcrumb_name").textContent = "No encontrado";
+	document.getElementById("current_page_category_link").textContent = "Catálogo";
+	document.getElementById("current_page_name").textContent = "No encontrado";
+	document.getElementById("product_name").textContent = "Product not found";
+	document.getElementById("product_price").textContent = "";
+	document.getElementById("product_description").textContent = "The requested product does not exist.";
+	document.getElementById("product_sizes").innerHTML = "";
+	document.getElementById("product_thumbnails").innerHTML = "";
+}
+
+function addCurrentProductToCart() {
+	if (!currentProduct) {
+		alert("Product not found.");
+		return false;
+	}
+
+	const qtyInput = document.getElementById("quantity_input");
+	let quantity = parseInt(qtyInput.value, 10);
+
+	if (isNaN(quantity) || quantity < 1) {
+		quantity = 1;
+		qtyInput.value = 1;
+	}
+
+	const selectedSizeInput = document.querySelector('input[name="product_size"]:checked');
+	const selectedSize = selectedSizeInput ? selectedSizeInput.value : "";
+
+	const productLabel = selectedSize
+		? `${currentProduct.name} - ${selectedSize}`
+		: currentProduct.name;
+
+	for (let i = 0; i < quantity; i++) {
+		window.addToCart(productLabel, currentProduct.price, currentProduct.image);
+	}
+
+	window.location.href = "cart.html";
+	return false;
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+	const productId = getProductIdFromUrl();
+
+	const qtyInput = document.getElementById("quantity_input");
+	const incBtn = document.getElementById("quantity_inc_button");
+	const decBtn = document.getElementById("quantity_dec_button");
+
+	if (incBtn && qtyInput) {
+		incBtn.addEventListener("click", function () {
+			let currentValue = parseInt(qtyInput.value, 10);
+			if (isNaN(currentValue) || currentValue < 1) currentValue = 1;
+			qtyInput.value = currentValue + 1;
+		});
+	}
+
+	if (decBtn && qtyInput) {
+		decBtn.addEventListener("click", function () {
+			let currentValue = parseInt(qtyInput.value, 10);
+			if (isNaN(currentValue) || currentValue <= 1) {
+				qtyInput.value = 1;
+				return;
+			}
+			qtyInput.value = currentValue - 1;
+		});
+	}
+
+	if (!productId) {
+		renderProductNotFound();
+		return;
+	}
+
+	const product = getProductById(productId);
+
+	if (!product) {
+		renderProductNotFound();
+		return;
+	}
+
+	renderProduct(product);
+});
+</script>
+
 </body>
 </html>
